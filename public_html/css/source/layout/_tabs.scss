@@ -1,0 +1,104 @@
+//==================== tabs
+.tabs-title {
+  font: 700 30px/1 "Museo";
+  margin-bottom: 55px;
+}
+
+.nav.nav-tabs {
+  @include clearfix;
+  font: 500 18px/80px "Museo";
+  text-align: center;
+  max-width: 884px;
+  height: 80px;
+  background: #d2d9ca;
+  border-radius: 40px;
+  margin: 0 auto 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.tab-link {
+  @include general-transition;
+  color: $font-color !important;
+  width: 50%;
+  float: left;
+  cursor: pointer !important;
+  border-radius: 40px;
+
+  &:hover,
+  &:active {
+    color: $primary-color !important;
+  }
+
+  &.active {
+    color: #fff !important;
+  }
+}
+
+.tab-slider {
+  @include general-transition;
+  @include abs-center;
+  right: auto;
+  content: "";
+  width: 50%;
+  height: 80px;
+  background: $primary-color;
+  border-radius: 40px;
+  z-index: -1;
+  -webkit-box-shadow: 0 3px 15px 0 transparentize($primary-color, .5);
+  box-shadow: 0 3px 15px 0 transparentize($primary-color, .5);
+
+  .tab-1.active ~ & {
+    left: 0;
+  }
+
+  .tab-2.active ~ & {
+    left: 50%;
+  }
+}
+
+.tabs-content-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.tab-content {
+  @include general-transition;
+  width: 100%;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 5;
+
+  &.active {
+    opacity: 1;
+    height: auto;
+    z-index: 10;
+  }
+}
+
+
+@include media("<640px"){
+  .nav.nav-tabs {
+    display: block;
+    height: auto;
+  }
+
+  ul.nav li {
+      float: none;
+      display: block;
+      width: 100%;
+  }
+
+  .tab-1.active ~ .tab-slider {
+      left: 0;
+      margin-top: 0;
+  }
+
+  .tab-2.active ~ .tab-slider {
+      bottom: 0;
+      margin-bottom: 0;
+      left: 0;
+  }
+};

@@ -1,0 +1,251 @@
+//====================icons
+.icon {
+  display: inline-block;
+  overflow: hidden;
+  text-indent: -9999px;
+  background: url('../images/sprite.png') no-repeat transparent;
+  position: relative;
+  vertical-align: middle;
+}
+
+.will-change {
+  background: none;
+
+  &::before,
+  &::after {
+    @include general-transition;
+    @include abs-center;
+    content: "";
+    overflow: hidden;
+    background: url('../images/sprite.png') no-repeat transparent;
+  }
+
+  &::before {
+    opacity: 1;
+  }
+
+  &::after {
+    opacity: 0;
+  }
+
+  &:hover,
+  &:active,
+  &.active {
+
+    &::before {
+      opacity: 0;
+    }
+
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  &:hover,
+  &:active,
+  a:hover &,
+  a:active &,
+  .question:hover &,
+  .question:active &,
+  .question-item.active .question & {
+
+    &::before {
+      opacity: 0;
+    }
+
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+.close {
+  @extend .will-change;
+  width: 50px;
+  height: 50px;
+
+  &::before {
+    background-position: -70px -2873px !important;
+  }
+
+  &::after {
+    background-position: -10px -2873px !important;
+  }
+}
+
+.icon-zoom {
+  background-position: -10px -2933px !important;
+  width: 40px;
+  height: 40px;
+}
+
+.icon-modern-1 {
+  background-position: -10px -0px;
+  width: 123px;
+  height: 123px;
+}
+
+.icon-modern-2 {
+  background-position: -10px -133px;
+  width: 123px;
+  height: 123px;
+}
+
+.icon-modern-3 {
+  background-position: -10px -266px;
+  width: 123px;
+  height: 123px;
+}
+
+.icon-modern-4 {
+  background-position: -10px -399px;
+  width: 123px;
+  height: 123px;
+}
+
+.icon-modern-5 {
+  background-position: -10px -532px;
+  width: 123px;
+  height: 123px;
+}
+
+.icon-modern-6 {
+  background-position: -10px -665px;
+  width: 123px;
+  height: 123px;
+}
+
+.icon-modern-7 {
+  background-position: -10px -798px;
+  width: 123px;
+  height: 123px;
+}
+
+.icon-modern-8 {
+  background-position: -10px -931px;
+  width: 123px;
+  height: 123px;
+}
+
+.icon-step-1 {
+  background-position: -10px -1064px;
+  width: 123px;
+  height: 123px;
+}
+
+.icon-step-2 {
+  background-position: -10px -1197px;
+  width: 123px;
+  height: 123px;
+}
+
+.icon-step-3 {
+  background-position: -10px -1330px;
+  width: 123px;
+  height: 123px;
+}
+
+.icon-step-4 {
+  background-position: -10px -1463px;
+  width: 123px;
+  height: 123px;
+}
+
+.icon-step-5 {
+  background-position: -10px -1596px;
+  width: 123px;
+  height: 123px;
+}
+
+.icon-warning-1 {
+  background-position: -10px -1729px;
+  width: 120px;
+  height: 107px;
+}
+
+.icon-warning-2 {
+  background-position: -10px -1846px;
+  width: 114px;
+  height: 107px;
+}
+
+.icon-warning-4 {
+  background-position: -10px -1963px;
+  width: 105px;
+  height: 107px;
+}
+
+.icon-advantage-2 {
+  background-position: -10px -2080px;
+  width: 95px;
+  height: 83px;
+}
+
+.icon-advantage-3 {
+  background-position: -10px -2173px;
+  width: 91px;
+  height: 81px;
+}
+
+.icon-advantage-1 {
+  background-position: -10px -2264px;
+  width: 90px;
+  height: 90px;
+}
+
+.icon-warning-3 {
+  background-position: -10px -2364px;
+  width: 88px;
+  height: 107px;
+}
+
+.icon-heading-1 {
+  background-position: -10px -2481px;
+  width: 80px;
+  height: 97px;
+}
+
+.icon-heading-2 {
+  background-position: -10px -2588px;
+  width: 80px;
+  height: 78px;
+}
+
+.icon-heading-3 {
+  background-position: -10px -2676px;
+  width: 80px;
+  height: 92px;
+}
+
+.icon-advantage-4 {
+  background-position: -10px -2778px;
+  width: 67px;
+  height: 85px;
+}
+
+.icon-phone {
+  background-position: -87px -2778px;
+  width: 27px;
+  height: 27px;
+}
+
+.icon-basket {
+  background-position: -87px -2815px;
+  width: 25px;
+  height: 26px;
+}
+
+.icon-plus {
+  background-position: -111px -2173px;
+  width: 11px;
+  height: 10px;
+}
+
+//==================== SVG icons
+.svg-icon {
+  @include general-transition;
+  display: inline-block;
+  vertical-align: middle;
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+}

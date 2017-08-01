@@ -1,0 +1,75 @@
+//==================== section form
+.section-form {
+  @include section-skew(100px);
+  color: #fff;
+
+  .section-bg-holder {
+    @include section-skew-bg(5, 200px);
+
+    &::before {
+      background-size: cover !important;
+    }
+  }
+
+  h2 {
+    text-transform: none;
+  }
+
+  .btn-holder {
+    margin-top: 10px;
+  }
+}
+
+.form-agree {
+  margin-top: 35px;
+}
+
+//==================== section form-1
+.form-1 {
+  padding: 70px 0 214px;
+  .section-bg-holder {
+    @include media("<md"){
+      background: #554912;
+    };
+  }
+
+  .section-bg-holder::before {
+    background: fixed url('../images/form1-bg.jpg') no-repeat 50% 50% $primary-color;
+      @include media("<md"){
+        opacity: 0.7;
+      };
+  }
+
+  h2 {
+    font: 36px/1 "Big Softie";
+    margin-bottom: 14px;
+
+    & + p {
+      font: 700 24px/1.5 "Museo";
+      margin-bottom: 45px;
+    }
+  }
+
+  form {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+}
+
+//==================== section form-2
+.form-2 {
+  padding-bottom: 134px;
+
+  .section-bg-holder::before {
+    background: fixed url('../images/form2-bg.jpg') no-repeat 50% 50% $primary-color;
+  }
+
+  h2 {
+    font: 36px/1.5 "Big Softie";
+    margin-bottom: 18px;
+
+    & + p {
+      margin-bottom: 66px;
+    }
+  }
+}

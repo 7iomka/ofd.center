@@ -1,0 +1,111 @@
+//====================placeholder
+::-webkit-input-placeholder {opacity: 1; color: $font-color;}
+:-moz-placeholder {opacity: 1; color: $font-color;}
+::-moz-placeholder {opacity: 1; color: $font-color;}
+:-ms-input-placeholder {opacity: 1; color: $font-color;}
+.placeholder {opacity: 1; color: $font-color;}
+
+:focus::-webkit-input-placeholder {opacity: 0}
+:focus:-moz-placeholder {opacity: 0}
+:focus::-moz-placeholder {opacity: 0}
+:focus:-ms-input-placeholder {opacity: 0}
+:focus.placeholder {opacity: 0}
+
+//====================error inputs
+input.si-error::-webkit-input-placeholder, textarea.si-error::-webkit-input-placeholder {color: $error-color;}
+
+input.si-error::-moz-placeholder, textarea.si-error::-moz-placeholder {color: $error-color;}
+
+input.si-error::-ms-input-placeholder, textarea.si-error::-ms-input-placeholder {color: $error-color;}
+
+input.si-error.placeholder, textarea.si-error.placeholder {color: $error-color;}
+
+input[type=text] {
+
+  &.si-error {
+    color: $error-color !important;
+    border-color: $error-color !important;
+  }
+}
+
+//====================label
+label {
+  cursor: pointer !important;
+}
+
+//====================text inputs
+input[type=text] {
+  -webkit-appearance: none;
+  display: block;
+  color: $font-color !important;
+  width: 100%;
+  height: 80px;
+  background: no-repeat #fff;
+  border: 1px solid $font-color;
+  padding: 0 38px;
+  border-radius: 40px;
+  margin-bottom: $pad * 2;
+
+  .section-form & {
+    border-color: #fff !important;
+  }
+}
+
+input[type=email],
+input[type=tel] {
+  @extend input[type=text];
+}
+
+//====================textarea
+textarea {
+  @extend input[type=text];
+  resize: none !important;
+  height: 260px;
+  padding: 30px 38px;
+}
+
+//====================checkbox
+.checkbox-label {
+  display: inline-block;
+  text-align: left;
+  padding-left: 40px;
+  position: relative !important;
+}
+
+.jq-checkbox {
+  width: 26px;
+  height: 26px;
+  background: transparent;
+  border: 2px solid $font-color !important;
+  border-radius: 4px;
+  margin: 0;
+  position: absolute !important;
+  top: -2px;
+  left: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+
+  .section-form & {
+    border-color: #fff !important;
+  }
+}
+
+.jq-checkbox__div {
+  @include general-transition;
+  @include abs-center;
+  display: inline-block !important;
+  width: 18px !important;
+  height: 13px !important;
+  background: url('../images/checkbox-bg.png') no-repeat 50% 50% transparent !important;
+  border-radius: 0 !important;
+  opacity: 0;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+
+  .checkbox-label:hover &,
+  .checkbox-label:active &,
+  .jq-checkbox.checked & {
+    @include abs-center;
+    opacity: 1;
+  }
+}

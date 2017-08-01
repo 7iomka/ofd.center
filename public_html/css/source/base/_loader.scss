@@ -1,0 +1,48 @@
+html {
+
+  &.loading {
+    overflow: hidden !important;
+    height: 100% !important;
+
+    .loader {
+      opacity: 1;
+    }
+  }
+}
+
+.loader {
+  @include general-transition;
+  @include abs-center;
+  position: fixed !important;
+  color: $font-color;
+  background: #fff;
+  height: 100%;
+  z-index: 9999;
+  opacity: 0;
+  transition-duration: .5s;
+}
+
+.a-loader {
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  position: relative;
+
+  img {
+    @include abs-center;
+    display: block;
+  }
+
+  &.a-loader-1 {
+    @extend .rotate-loader;
+  }
+}
+
+.loader-text {
+  margin-top: 16px;
+
+  &::after {
+    content: "...";
+    position: absolute;
+  }
+}

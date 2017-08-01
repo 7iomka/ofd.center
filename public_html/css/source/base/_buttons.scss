@@ -1,0 +1,83 @@
+//====================buttons
+.btn-holder {
+  position: relative;
+  z-index: 1;
+}
+
+.btn {
+  @include general-transition;
+  display: inline-block;
+  cursor: pointer;
+  border: 0;
+  text-decoration: none !important;
+  text-align: center;
+  white-space: nowrap;
+  position: relative;
+  z-index: 2;
+
+  color: #fff !important;
+  background: $primary-color;
+  font: 700 15px/65px "Museo";
+  text-transform: uppercase;
+  height: 65px;
+  border-radius: 32px;
+  padding: 0 32px;
+
+  &:hover,
+  &:active {
+    background: #6a9a2e;
+  }
+
+  &:active {
+    @include no-transition;
+    top: 3px;
+
+    &::before,
+    &::after {
+      @include no-transition;
+    }
+  }
+
+  .icon {
+    margin-right: 10px;
+  }
+}
+
+.btn-big {
+  font: 700 15px/80px "Museo";
+  height: 80px;
+  border-radius: 40px;
+  padding: 0 40px;
+  @include media("<sm"){
+    line-height: 25px;
+    white-space: normal;
+  };
+
+  &.btn-primary {
+    font: 700 24px/80px "Museo";
+    @include media("<480px"){
+      padding: 23px 20px;
+      height: auto;
+      line-height: 25px;
+      font-size: 16px;
+    };
+  }
+}
+
+.btn-primary {
+  @extend .si-button-pulse-primary;
+  -webkit-box-shadow: 0 3px 15px 0 transparentize($primary-color, .5);
+  box-shadow: 0 3px 15px 0 transparentize($primary-color, .5);
+}
+
+.btn-accent {
+  @extend .si-button-pulse-accent;
+  background: $accent-color;
+  -webkit-box-shadow: 0 3px 15px 0 transparentize($accent-color, .5);
+  box-shadow: 0 3px 15px 0 transparentize($accent-color, .5);
+
+  &:hover,
+  &:active {
+    background: #e45a2c;
+  }
+}

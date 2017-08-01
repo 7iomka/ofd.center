@@ -1,0 +1,87 @@
+
+.hamburger{
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.hamburger .line{
+  width: 50px;
+  height: 5px;
+  background-color: #ecf0f1;
+  display: block;
+  margin: 8px auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger:hover{
+  cursor: pointer;
+}
+.hamburger{
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger.is-active{
+  transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger:before{
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  width: 70px;
+  height: 70px;
+  border: 5px solid transparent;
+  top: calc(50% - 35px);
+  left: calc(50% - 35px);
+  border-radius: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger.is-active:before{
+  border: 5px solid #ecf0f1;
+}
+
+.hamburger.is-active .line{
+  width: 35px;
+}
+
+.hamburger.is-active .line:nth-child(2){
+  opacity: 0;
+}
+
+.hamburger.is-active .line:nth-child(1){
+
+  transform: translateY(13px);
+}
+
+.hamburger.is-active .line:nth-child(3){
+
+  transform: translateY(-13px) rotate(90deg);
+}
+
+
+/** fixed active menu **/
+.active .hamburger .line {
+    background-color: #332f2e;
+}
+
+.active .hamburger.is-active {
+    
+}
+.layout-header:not(.active) .hamburger:not(.is-active) .line {
+    background-color: #ecf0f1;
+}
+
+/** custom line colors **/
+.hamburger:not(.is-active) .line {
+  &:nth-child(1) {
+      background-color: #332f2e;
+  }
+  &:nth-child(2) {
+      background-color: #8b2a87;
+  }
+
+  &:nth-child(3) {
+      background-color: #eb5219;
+  }
+}
