@@ -180,7 +180,7 @@ if (file_exists('SxGeo.php')) {
                     <div class="col-9 col-sm-7 col-md-8">
                       <div class="row align-items-sm-center align-items-lg-start">
                         <!-- Logo -->
-                        <div class="col-8 col-sm-5 col-md-4 mb-sm-3 mb-xl-0 text-center text-sm-left">
+                        <div class="col-12 col-sm-5 col-md-4 mb-sm-3 mb-xl-0 ">
                             <a href="#" class="logo light si-jump">
                                 <img src="images/logo-light.png" alt=" ">
                             </a>
