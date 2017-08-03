@@ -36,50 +36,50 @@ if (file_exists('SxGeo.php')) {
         case 'Ростов-на-Дону':
             $p_city = 'Ростов-на-Дону';
             $p_address = 'г. Ростов-на-Дону, пр-т Стачки 160';
-            $p_phone = '+7 (863) 333-27-43';
-            $p_phone_link = '+78633332743';
+            $p_phone = '+7 (863) 322-02-69';
+            $p_phone_link = '+78633220269';
             $e_mail = 'south@kafe-soft.ru';
             break;
         case 'Москва':
             $p_city = 'Москва';
             $p_address = 'Москва, ул. Выборгская 16, стр. 1, БЦ "Выборгский", офис №106 (на входе пропускная система по паспорту).';
-            $p_phone = '+7 (495) 662-99-54';
-            $p_phone_link = '+74956629954';
+            $p_phone = '+7 (495) 646-81-66';
+            $p_phone_link = '+74956468166';
             $e_mail = 'info@kafe-soft.ru';
             break;
         case 'Химки':
             $p_city = 'Москва';
             $p_address = 'Москва, ул. Выборгская 16, стр. 1, БЦ "Выборгский", офис №106 (на входе пропускная система по паспорту).';
-            $p_phone = '+7 (495) 662-99-54';
-            $p_phone_link = '+74956629954';
+            $p_phone = '8 (800) 333-55-94';
+            $p_phone_link = '+78003335594';
             $e_mail = 'info@kafe-soft.ru';
             break;
         case 'Красногорск':
             $p_city = 'Москва';
             $p_address = 'Москва, ул. Выборгская 16, стр. 1, БЦ "Выборгский", офис №106 (на входе пропускная система по паспорту).';
-            $p_phone = '+7 (495) 662-99-54';
-            $p_phone_link = '+74956629954';
+            $p_phone = '8 (800) 333-55-94';
+            $p_phone_link = '+78003335594';
             $p_email = 'info@kafe-soft.ru';
             break;
         case 'Домодедово':
             $p_city = 'Москва';
             $p_address = 'Москва, ул. Выборгская 16, стр. 1, БЦ "Выборгский", офис №106 (на входе пропускная система по паспорту).';
-            $p_phone = '+7 (495) 662-99-54';
-            $p_phone_link = '+74956629954';
+            $p_phone = '8 (800) 333-55-94';
+            $p_phone_link = '+78003335594';
             $p_email = 'info@kafe-soft.ru';
             break;
         case 'Люберцы':
             $p_city = 'Москва';
             $p_address = 'Москва, ул. Выборгская 16, стр. 1, БЦ "Выборгский", офис №106 (на входе пропускная система по паспорту).';
-            $p_phone = '+7 (495) 662-99-54';
-            $p_phone_link = '+74956629954';
+            $p_phone = '8 (800) 333-55-94';
+            $p_phone_link = '+78003335594';
             $p_email = 'info@kafe-soft.ru';
             break;
         default:
             $p_city = 'Москва';
             $p_address = 'Москва, ул. Выборгская 16, стр. 1';
-            $p_phone = '8 (800) 555-90-84';
-            $p_phone_link = '+78005559084';
+            $p_phone = '+7 (495) 646-81-66';
+            $p_phone_link = '+74956468166';
             $p_email = 'info@kafe-soft.ru';
             break;
     }
@@ -201,12 +201,12 @@ if (file_exists('SxGeo.php')) {
                         <div class="hidden-xs-down col-12 col-sm-7 col-xl-4 text-center text-sm-left">
                             <div class="header-geo-holder">
                                 <div class="header-geo">
-                                    Ваш регион:
-                                    <span class="primary">Москва</span>
+                                  Ваш регион:
+                                  <span class="primary"><?php echo $p_city; ?></span>
                                 </div>
 
                                 <p>
-                                    Мы переводим на&nbsp;ФЗ‑54 в&nbsp;г.&nbsp;Москва                            </p>
+                                    Мы переводим на&nbsp;ФЗ&#8209;54 в&nbsp;г.&nbsp;<?php echo $p_city; ?> </p>
                             </div>
                         </div>
                       </div>
@@ -215,7 +215,7 @@ if (file_exists('SxGeo.php')) {
                     <!-- Phone block -->
                     <div class="hidden-xs-down col-12 col-sm-5 col-md-4 text-center text-sm-right text-xl-left">
                         <div class="si-phone">
-                            <a href="tel:+78005559084" class="phone-link light">8 (800) 555-90-84</a>
+                            <a href="tel:<?php echo $p_phone_link; ?>" class="phone-link light"><?php echo $p_phone; ?></a>
                             <a href="#" class="btn btn-accent open-phone-modal" data-extra="1">
                                 <span class="icon icon-phone"></span>
                                 Заказать звонок
@@ -248,19 +248,19 @@ if (file_exists('SxGeo.php')) {
                         <div class="col-auto my-3 pull-2">
                             <div class="header-geo-holder">
                                 <div class="header-geo">
-                                    Ваш регион:
-                                    <span class="primary">Москва</span>
+                                  Ваш регион:
+                                  <span class="primary"><?php echo $p_city; ?></span>
                                 </div>
 
                                 <p>
-                                    Мы переводим на&nbsp;ФЗ‑54 в&nbsp;г.&nbsp;Москва                            </p>
+                                    Мы переводим на&nbsp;ФЗ&#8209;54 в&nbsp;г.&nbsp;<?php echo $p_city; ?></p>
                             </div>
                         </div>
 
                         <!-- Phone block -->
                         <div class="col-auto text-center">
                             <div class="si-phone">
-                                <a href="tel:+78005559084" class="phone-link light">8 (800) 555-90-84</a>
+                                <a href="tel:<?php echo $p_phone_link; ?>" class="phone-link light"><?php echo $p_phone; ?></a>
                                 <a href="#" class="btn btn-accent open-phone-modal" data-extra="1">
                                     <span class="icon icon-phone"></span>
                                     Заказать звонок
@@ -1448,13 +1448,13 @@ if (file_exists('SxGeo.php')) {
                     </div>
 
                     <!-- copyright block -->
-                    <div class="copyright">
+                    <!-- <div class="copyright">
                         Разработано в
                         <a href="http://hello-brand.ru/" class="primary underline" target="_blank"
                            rel="nofollow noopener">
                             "Hello, brand!"
                         </a>
-                    </div>
+                    </div> -->
 
                 </div>
 
